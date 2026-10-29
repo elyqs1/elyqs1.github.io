@@ -3,7 +3,7 @@ name: Deploy Hexo to GitHub Pages
 on:
   push:
     branches:
-      - main  # Hoặc master nếu repo của bạn dùng nhánh master
+      - main
 
 jobs:
   build-and-deploy:
@@ -16,13 +16,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
 
       - name: Install Dependencies
         run: npm install
 
       - name: Build Static Files
-        run: ./node_modules/.bin/hexo generate
+        run: npx hexo generate
 
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
