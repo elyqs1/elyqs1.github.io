@@ -15,13 +15,7 @@ menu:
   - name: about
     url: /about
     icon:
-  - name: friend
-    url: /friend
-    icon:
 
-# friend links
-friends:
-  shuffle: false # whether to shuffle the friend links
 
 subtitle:
   typing:
